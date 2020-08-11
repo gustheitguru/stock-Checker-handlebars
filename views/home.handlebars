@@ -1,0 +1,31 @@
+<!-- starting out template to test page works
+<h1> test app</h1>
+      will return [object object to screen]
+<p>{{stock}}</p>
+<br> -->
+<!-- starting page below this putting return in jumboTron Bootstrap-->
+<!-- you need to call the objectName.Key and it will render the value to the screen -->
+
+<!-- test pass through of var into search -->
+<!-- {{post_stuff}} -->
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">{{stock.companyName}}  ({{stock.symbol}})</h1>
+      <strong>Latest Price: </strong>${{stock.latestPrice}}<br>
+      <strong>Previous Close: </strong>{{stock.previousClose}}<br>
+      <strong>Precent Change: </strong>{{stock.changePercent}}<br>
+      <strong>Market Cap: </strong>{{stock.marketCap}}<br>
+      <strong>YTD Change: </strong>{{stock.ytdChange}}<br>
+      <strong>52 Week High: </strong>{{stock.week52High}}<br>
+      <strong>52 Week Low: </strong>{{stock.week52Low}}<br>
+ </div>
+</div>
+
+
+<!-- you have to loop through each item in the returned JSON to print out to the screen -->
+<!-- @key wil return Key and 'this' will return value {key:value} Pair <br> to print out new item on sperate line-->
+<!-- this will print out on inspect page not render page  
+{{#each stock}}
+  <b>{{@key}}</b> | <c style="color:red">{{this}}</c> <br>
+{{/each}}
